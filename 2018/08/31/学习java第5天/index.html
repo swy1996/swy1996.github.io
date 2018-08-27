@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/index_180x180.jpeg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/uploads/index_32x32.jpeg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/uploads/index_16x16.jpeg?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="学习Java(黑马)," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="今日内容介绍1、方法基础知识2、方法高级内容3、方法案例 方法的概述* A: 为什么要有方法     * 提高代码的复用性  * B: 什么是方法     * 完成特定功能的代码块。  方法的定义格式* A: 方法的格式 *          修饰符 返回值类型 方法名(参数类型 参数名1,参数类型 参数名2...) {             方法体语句;             return">
+<meta name="keywords" content="学习Java(黑马)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="学习java第5天">
+<meta property="og:url" content="http://yuezhi.tk/2018/08/31/学习java第5天/index.html">
+<meta property="og:site_name" content="木槿花开">
+<meta property="og:description" content="今日内容介绍1、方法基础知识2、方法高级内容3、方法案例 方法的概述* A: 为什么要有方法     * 提高代码的复用性  * B: 什么是方法     * 完成特定功能的代码块。  方法的定义格式* A: 方法的格式 *          修饰符 返回值类型 方法名(参数类型 参数名1,参数类型 参数名2...) {             方法体语句;             return">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-27T14:43:39.230Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="学习java第5天">
+<meta name="twitter:description" content="今日内容介绍1、方法基础知识2、方法高级内容3、方法案例 方法的概述* A: 为什么要有方法     * 提高代码的复用性  * B: 什么是方法     * 完成特定功能的代码块。  方法的定义格式* A: 方法的格式 *          修饰符 返回值类型 方法名(参数类型 参数名1,参数类型 参数名2...) {             方法体语句;             return">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yuezhi.tk/2018/08/31/学习java第5天/"/>
+
+
+
+
+
+  <title>学习java第5天 | 木槿花开</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">木槿花开</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">多情自古伤离别</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yuezhi.tk/2018/08/31/学习java第5天/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="越之">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/index.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木槿花开">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">学习java第5天</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-31T17:00:10+08:00">
+                2018-08-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,935 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>今日内容介绍<br>1、方法基础知识<br>2、方法高级内容<br>3、方法案例</p>
+<h3 id="方法的概述"><a href="#方法的概述" class="headerlink" title="方法的概述"></a>方法的概述</h3><pre><code>* A: 为什么要有方法
+    * 提高代码的复用性 
+* B: 什么是方法
+    * 完成特定功能的代码块。 
+</code></pre><h3 id="方法的定义格式"><a href="#方法的定义格式" class="headerlink" title="方法的定义格式"></a>方法的定义格式</h3><pre><code>* A: 方法的格式
+* 
+        修饰符 返回值类型 方法名(参数类型 参数名1,参数类型 参数名2...) {
+            方法体语句;
+            return 返回值; 
+        } 
+* B: 方法的格式说明
+    * 修饰符：目前就用 public static。后面我们再详细的讲解其他的修饰符。
+    * 返回值类型：就是功能结果的数据类型。
+    * 方法名：符合命名规则即可。方便我们的调用。
+    * 参数：
+        * 实际参数：就是实际参与运算的。
+        * 形式参数；就是方法定义上的，用于接收实际参数的。
+    * 参数类型：就是参数的数据类型
+    * 参数名：就是变量名
+    * 方法体语句：就是完成功能的代码。
+    * return：结束方法的。
+    * 返回值：就是功能的结果，由return带给调用者。 
+</code></pre><h3 id="定义方法计算面积"><a href="#定义方法计算面积" class="headerlink" title="定义方法计算面积"></a>定义方法计算面积</h3><pre><code>* A: 定义方法计算面积
+    public class MethodDemo{
+
+        public static void main(String[] args){
+             //调用方法, 方法执行起来
+             // 在方法main中,调用方法 getArea
+
+             int area = getArea(5,6);
+             System.out.println(&quot;面积是: &quot;+area);
+
+        }
+        /*
+           要求: 计算一个长方形的面积
+           定义方法解决这个要求
+           分析方法定义过程:
+              1.明确方法计算后的结果的数据类型 int  定义格式对应的就是返回值类型
+              2.方法计算过程中,有没有未知的数据, 宽和长, 未知数据的数据类型 int
+                  未知数的变量,定义在方法的小括号内
+        */
+        public static int  getArea(int w, int h){
+            //实现方法的功能主体
+            //int area = w * h;
+            return w * h;
+        }
+    }
+</code></pre><h3 id="调用方法"><a href="#调用方法" class="headerlink" title="调用方法"></a>调用方法</h3><pre><code>* A: 调用方法
+    * a: 在main函数中调用方法，让方法执行起来
+    * b: 方法的形参
+        * 方法要什么参数我们就给什么类型的参数。
+    * c: 方法的返回值
+        * 方法返回什么类型的值我们就用对应的数据类型的变量来接收
+</code></pre><h3 id="调用方法执行流程"><a href="#调用方法执行流程" class="headerlink" title="调用方法执行流程"></a>调用方法执行流程</h3><pre><code>* A: 调用方法执行流程
+    * a: 方法的定义是没有顺序的，写在main函数的上边或者下边都可以。
+    * b: 方法的执行，是把实参传递给形参，从而来执行的。
+    * c: 方法只有被调用才会执行。
+</code></pre><h3 id="方法调用的内存图"><a href="#方法调用的内存图" class="headerlink" title="方法调用的内存图"></a>方法调用的内存图</h3><pre><code>* A: 方法调用的内存图
+    * a: 参见\day05\day05(Java基础语法)\day05_source\方法内存图.JPG
+</code></pre><h3 id="方法调用的练习"><a href="#方法调用的练习" class="headerlink" title="方法调用的练习"></a>方法调用的练习</h3><pre><code>* A: 案例代码
+    /*
+       方法的定义练习
+    */
+    import java.util.Scanner;
+    public class MethodDemo_1{
+        public static void main(String[] args){
+            //printRect();
+            //int number = getNumber();
+            //System.out.println(getNumber());
+            //printRect2(3,5);
+            double avg = getAvg(2,2,3);
+            System.out.println(avg);
+        }
+
+        /*
+           定义有返回值有参数方法，如求三个数的平均值
+           明确方法计算后的数据类型, 返回值类型 double
+           明确方法未知数, 三个未知的整数
+        */
+        public static double getAvg(double a, double b,double c){
+             return (a+b+c)/3;
+        }
+
+        /*
+            定义无返回值有参数方法，如打印指定M行，每行N个*号的矩形
+            明确方法计算后结果,控制台输出图形,没有返回值的
+            方法中有没有未知数,图形行数,和列数,是未知的, 数据类型整数int
+        */
+        public static void printRect2(int m,int n){
+            for(int i = 0 ; i &lt; m ; i++){
+                for(int j = 0 ; j &lt; n ;  j++){
+                    System.out.print(&quot;*&quot;);
+                }
+                System.out.println();
+            }
+        }
+
+        /*
+           定义有返回值无参数方法，如键盘录入得到一个整数
+           明确方法计算后结果的数据类型 int
+           明确有没有未知数,没
+        */
+        public static int getNumber(){
+            Scanner sc = new Scanner(System.in);
+            //int number = sc.nextInt();
+            return sc.nextInt();
+        }
+
+        /*
+           定义无返回值无参数方法，如打印3行，每行3个*号的矩形
+           为什么没有返回值:
+               打印矩形 ,输出效果,不需要将结果返回
+               明确未知数: 不需要未知数
+        */
+        public static void printRect(){
+            for(int i = 0 ; i &lt; 3 ; i++){
+                for(int j = 0 ; j &lt; 3 ;j++){
+                    System.out.print(&quot;*&quot;);
+                }
+                System.out.println();
+            }
+        }
+    }
+</code></pre><h3 id="方法的定义和使用的注意事项"><a href="#方法的定义和使用的注意事项" class="headerlink" title="方法的定义和使用的注意事项"></a>方法的定义和使用的注意事项</h3><pre><code>* A: 方法的定义和使用的注意事项
+    * a: 方法不能定义在另一个方法的里面
+     * b: 写错方法名字
+    * c: 写错了参数列表
+    * d: 方法返回值是void,方法中可以省略return 不写
+         return 下面不能有代码
+    * e 方法返回值类型,和return 后面数据类型必须匹配
+    * f: 方法重复定义问题
+    * g: 调用方法的时候,返回值是void, 不能写在输出语句中
+</code></pre><h3 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h3><pre><code>* A: 方法的重载
+    * 在同一个类中，方法名相同，参数列表不同。与返回值类型无关。
+
+    * 参数列表不同：
+        * A:参数个数不同
+        * B:参数类型不同
+        * C:参数的顺序不同(算重载,但是在开发中不用)
+
+* B: 案例代码
+    public static int getSum(int a,int b){
+        System.out.println(&quot;两个int参数&quot;);
+        return a+b;
+    }
+    public static int getSum(int a,int b,int c){
+        System.out.println(&quot;三个int参数&quot;);
+        return a+b+c;
+    }
+    public static double getSum(double a,double b){
+        System.out.println(&quot;两个double参数&quot;);
+        return a+b;
+    }
+</code></pre><h3 id="方法重载注意事项"><a href="#方法重载注意事项" class="headerlink" title="方法重载注意事项"></a>方法重载注意事项</h3><pre><code>* A: 方法重载注意事项
+    * a: 参数列表必须不同
+    * b: 重载和参数变量名无关
+    * c: 重载和返回值类型无关
+    * d: 重载和修饰符无关
+    * e: 技巧: 重载看方法名和参数列表
+</code></pre><h3 id="方法参数是基本数据类型"><a href="#方法参数是基本数据类型" class="headerlink" title="方法参数是基本数据类型"></a>方法参数是基本数据类型</h3><pre><code>* A: 方法参数是基本数据类型
+    * a: 方法参数是基本类型时，传递的是值。
+</code></pre><h3 id="方法参数是引用数据类型"><a href="#方法参数是引用数据类型" class="headerlink" title="方法参数是引用数据类型"></a>方法参数是引用数据类型</h3><pre><code>* A: 方法参数是引用数据类型
+    * a: 方法参数是引用类型时，传递的是内存地址值。
+</code></pre><h3 id="随机点名器"><a href="#随机点名器" class="headerlink" title="随机点名器"></a>随机点名器</h3><pre><code>* A: 案例代码
+    /*
+       实现随机点名器
+         1.存储所有学生姓名
+         2.预览所有学生姓名,遍历数组
+         3.随机数作为索引,到数组中找元素
+
+        将功能独立出来, 作成方法,调用方法即可
+
+        定义三个功能, 用到同一个姓名数据
+        姓名存储到数组中,三个方法,使用一个数组中的数据, 方法传递参数
+    */
+    import java.util.Random;
+    public class CallName{
+        public static void main(String[] args){
+            //定义数组,存储学生姓名
+            String[] names = new String[8];
+            //调用添加姓名方法
+            addStudent(names);
+            //调用遍历数组方法
+            printStudentName(names);
+            //调用随机姓名的方法
+            String name = randomStudentName(names);
+            System.out.println(name);
+        }
+        /*
+          定义方法,随机数,做索引,数组中找到学生姓名
+          返回值?  学生姓名
+          参数?  数组
+        */
+        public static String randomStudentName(String[] names){
+            Random ran = new Random();
+            int index = ran.nextInt(names.length);
+            return names[index];
+        }
+
+        /*
+           定义方法,遍历数组
+           返回值? 没有
+           参数? 数组
+        */
+        public static void printStudentName(String[] names){
+            for(int i = 0 ; i &lt; names.length ;i++){
+                System.out.println(names[i]);
+            }
+        }
+
+        /*
+           定义方法,实现向数组中添加学生姓名
+           返回值? 没有,
+           参数?  参数就是数组
+        */
+        public static void addStudent(String[] names){
+            names[0] = &quot;张三&quot;;
+            names[1] = &quot;李四&quot;;
+            names[2] = &quot;王五&quot;;
+            names[3] = &quot;李蕾&quot;;
+            names[4] = &quot;韩梅梅&quot;;
+            names[5] = &quot;小名&quot;;
+            names[6] = &quot;老王&quot;;
+            names[7] = &quot;小华&quot;;
+        }
+    }
+</code></pre><h3 id="库存案例代码实现-1"><a href="#库存案例代码实现-1" class="headerlink" title="库存案例代码实现_1"></a>库存案例代码实现_1</h3><pre><code>* A: 案例代码
+    /*
+       实现商品的库存管理
+         功能:
+            1.展示用户选择功能清单
+            2.根据选择的功能编号,进行不同的操作
+               A. 展示所有库存
+               B. 修改库存数量
+
+          分析:
+            1.展示用户清单:
+               输出语句, 用户输入, 选择功能序号
+            2.根据选择,调用不同的方法
+                switch语句
+                  case 1 2 3
+
+               A  展示库存
+                 将存储商品的数组,遍历
+               B  修改库存
+
+                  修改所有的库存数量
+    */
+    import java.util.Scanner;
+    public class Shopp{
+        public static void main(String[] args){
+
+        }
+
+        /*
+           定义方法,展示所有的库存清单,遍历
+           返回值,没有
+           参数, 数组
+        */
+        public static void printStore(String[] brand,double[] size,double[] price,int[] count){
+            System.out.println(&quot;----------商场库存清单----------&quot;);
+            System.out.println(&quot;品牌型号     尺寸    价格    库存数&quot;);
+            //定义变量,计算总库存数,和总价格
+            int totalCount = 0;
+            int totalMoney = 0;
+            //遍历数组,将数组中所有的商品信息打印出来
+            for(int i = 0 ; i &lt; brand.length ; i++){
+                System.out.println(brand[i]+&quot;   &quot;+size[i]+&quot;    &quot;+price[i]+&quot;   &quot;+count[i]);
+                totalCount += count[i];
+                totalMoney += count[i]*price[i];
+            }
+            System.out.println(&quot;总库存数: &quot;+totalCount);
+            System.out.println(&quot;商品库存总金额: &quot;+totalMoney);
+        }
+
+        /*
+          定义方法,实现用户的选择功能,功能的需要返回来
+          返回值, int
+          参数, 没有
+        */
+        public static int chooseFunction(){
+            System.out.println(&quot;-------------库存管理------------&quot;);
+            System.out.println(&quot;1.查看库存清单&quot;);
+            System.out.println(&quot;2.修改商品库存数量&quot;);
+            System.out.println(&quot;3.退出&quot;);
+            System.out.println(&quot;请输入要执行的操作序号：&quot;);
+            //接受键盘输入
+            Scanner sc = new Scanner(System.in);
+            int chooseNumber = sc.nextInt();
+            return chooseNumber;
+        }
+    }
+</code></pre><h3 id="库存案例代码实现-2"><a href="#库存案例代码实现-2" class="headerlink" title="库存案例代码实现_2"></a>库存案例代码实现_2</h3><pre><code>* A: 案例代码
+    /*
+      定义方法,修改所有商品的库存
+        用户输入1个,修改1个
+        返回值,没有
+        参数, 库存数的数组, 品名数组
+    */
+    public static void update(String[] brand, int[] count){
+        //遍历数组,遍历到一个,修改一个
+        //接受键盘输入
+        Scanner sc = new Scanner(System.in);
+        //遍历数组
+        for(int i = 0; i &lt; brand.length ; i++){
+            System.out.println(&quot;请输入&quot;+brand[i]+&quot;的库存数&quot;);
+            //键盘输入,录入库存, 存储到库存的数组中
+            int newCount = sc.nextInt();
+            count[i] = newCount;
+        }
+        //int chooseNumber = sc.nextInt();
+    }
+</code></pre><h3 id="库存案例代码测试"><a href="#库存案例代码测试" class="headerlink" title="库存案例代码测试"></a>库存案例代码测试</h3><pre><code>* A: 案例
+    /*
+       实现商品的库存管理
+         功能:
+            1.展示用户选择功能清单
+            2.根据选择的功能编号,进行不同的操作
+               A. 展示所有库存
+               B. 修改库存数量
+
+          分析:
+            1.展示用户清单:
+               输出语句, 用户输入, 选择功能序号
+            2.根据选择,调用不同的方法
+                switch语句
+                  case 1 2 3
+
+               A  展示库存
+                 将存储商品的数组,遍历
+               B  修改库存
+
+                  修改所有的库存数量
+    */
+    import java.util.Scanner;
+    public class Shopp{
+        public static void main(String[] args){
+            //使用数组,保存商品的信息
+            //品名,尺寸,价格,库存数, 定义5个数组
+            String[] brand = {&quot;MacBookAir&quot;,&quot;ThinkpadT450&quot;};
+            double[] size = {13.3,15.6};
+            double[] price = {9998.97,6789.56};
+            int[] count = {0,0};
+            while(true){
+                int choose = chooseFunction();
+                switch(choose){
+                    case 1:
+                      //调用查看库存清单方法
+                      printStore(brand,size,price,count);
+                    break;
+
+                    case 2:
+                      //调用修改库存的方法
+                      update(brand,count);
+                    break;
+
+                    case 3:
+                     return ;
+                    default:
+                      System.out.println(&quot;没有这个功能&quot;);
+                    break;
+                }
+            }
+        }
+        /*
+          定义方法,修改所有商品的库存
+            用户输入1个,修改1个
+            返回值,没有
+            参数, 库存数的数组, 品名数组
+        */
+        public static void update(String[] brand, int[] count){
+            //遍历数组,遍历到一个,修改一个
+            //接受键盘输入
+            Scanner sc = new Scanner(System.in);
+            //遍历数组
+            for(int i = 0; i &lt; brand.length ; i++){
+                System.out.println(&quot;请输入&quot;+brand[i]+&quot;的库存数&quot;);
+                //键盘输入,录入库存, 存储到库存的数组中
+                int newCount = sc.nextInt();
+                count[i] = newCount;
+            }
+            //int chooseNumber = sc.nextInt();
+        }
+
+        /*
+           定义方法,展示所有的库存清单,遍历
+           返回值,没有
+           参数, 数组
+        */
+        public static void printStore(String[] brand,double[] size,double[] price,int[] count){
+            System.out.println(&quot;----------商场库存清单----------&quot;);
+            System.out.println(&quot;品牌型号     尺寸    价格    库存数&quot;);
+            //定义变量,计算总库存数,和总价格
+            int totalCount = 0;
+            int totalMoney = 0;
+            //遍历数组,将数组中所有的商品信息打印出来
+            for(int i = 0 ; i &lt; brand.length ; i++){
+                System.out.println(brand[i]+&quot;   &quot;+size[i]+&quot;    &quot;+price[i]+&quot;   &quot;+count[i]);
+                totalCount += count[i];
+                totalMoney += count[i]*price[i];
+            }
+            System.out.println(&quot;总库存数: &quot;+totalCount);
+            System.out.println(&quot;商品库存总金额: &quot;+totalMoney);
+        }
+
+        /*
+          定义方法,实现用户的选择功能,功能的需要返回来
+          返回值, int
+          参数, 没有
+        */
+        public static int chooseFunction(){
+            System.out.println(&quot;-------------库存管理------------&quot;);
+            System.out.println(&quot;1.查看库存清单&quot;);
+            System.out.println(&quot;2.修改商品库存数量&quot;);
+            System.out.println(&quot;3.退出&quot;);
+            System.out.println(&quot;请输入要执行的操作序号：&quot;);
+            //接受键盘输入
+            Scanner sc = new Scanner(System.in);
+            int chooseNumber = sc.nextInt();
+            return chooseNumber;
+        }
+    }
+</code></pre>
+      
+    </div>
+    
+    
+    
+
+    
+
+	
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习Java-黑马/" rel="tag"># 学习Java(黑马)</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/30/学习java第4天/" rel="next" title="学习java第4天">
+                <i class="fa fa-chevron-left"></i> 学习java第4天
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/index.jpeg"
+                alt="越之" />
+            
+              <p class="site-author-name" itemprop="name">越之</p>
+              <p class="site-description motion-element" itemprop="description">念去去|千里烟波|暮霭沉沉楚天阔。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/swy1996" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:swy1996@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="" title="暂时没有" target="_blank">暂时没有</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法的概述"><span class="nav-number">1.</span> <span class="nav-text">方法的概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法的定义格式"><span class="nav-number">2.</span> <span class="nav-text">方法的定义格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义方法计算面积"><span class="nav-number">3.</span> <span class="nav-text">定义方法计算面积</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调用方法"><span class="nav-number">4.</span> <span class="nav-text">调用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调用方法执行流程"><span class="nav-number">5.</span> <span class="nav-text">调用方法执行流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法调用的内存图"><span class="nav-number">6.</span> <span class="nav-text">方法调用的内存图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法调用的练习"><span class="nav-number">7.</span> <span class="nav-text">方法调用的练习</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法的定义和使用的注意事项"><span class="nav-number">8.</span> <span class="nav-text">方法的定义和使用的注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法的重载"><span class="nav-number">9.</span> <span class="nav-text">方法的重载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法重载注意事项"><span class="nav-number">10.</span> <span class="nav-text">方法重载注意事项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法参数是基本数据类型"><span class="nav-number">11.</span> <span class="nav-text">方法参数是基本数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法参数是引用数据类型"><span class="nav-number">12.</span> <span class="nav-text">方法参数是引用数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机点名器"><span class="nav-number">13.</span> <span class="nav-text">随机点名器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#库存案例代码实现-1"><span class="nav-number">14.</span> <span class="nav-text">库存案例代码实现_1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#库存案例代码实现-2"><span class="nav-number">15.</span> <span class="nav-text">库存案例代码实现_2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#库存案例代码测试"><span class="nav-number">16.</span> <span class="nav-text">库存案例代码测试</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">越之</span>
+
+
+
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">全站共15.9k字</span>
+</div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> <script type="text/javascript" src="/js/src/fireworks.js"></script> 
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haru01.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
