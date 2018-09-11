@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="感悟," />
+  <meta name="keywords" content="树莓派," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="前言  寒蝉凄切，对长亭晚，骤雨初歇。  都门帐饮无绪，留恋处，兰舟催发。  执手相看泪眼，竟无语凝噎。  念去去，千里烟波，暮霭沉沉楚天阔。  多情自古伤离别，更那堪，冷落清秋节！  今宵酒醒何处？杨柳岸，晓风残月。  此去经年，应是良辰好景虚设。  便纵有千种风情，更与何人说？">
-<meta name="keywords" content="感悟">
+<meta name="description" content="一、 准备下载Raspbian解压后使用etcher写入存储卡写入完成后在boot分区新建一个空文件并更改文件名为ssh 二、配置1、登录1sudo ssh pi@树莓派ip -p 22 *如果出错1234查看本地保存的ssh公钥ssh-keygen -l -f ~/.ssh/known_hosts清理树莓派ip的认证rsassh-keygen -R 树莓派ip 2、校正树莓派时间1234设置时区">
+<meta name="keywords" content="树莓派">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇文章">
-<meta property="og:url" content="http://yuezhi.tk/2018/08/19/我的第一篇文章/index.html">
+<meta property="og:title" content="树莓派的开机配置">
+<meta property="og:url" content="http://yuezhi.tk/2018/09/11/树莓派的开机配置/index.html">
 <meta property="og:site_name" content="木槿花开">
-<meta property="og:description" content="前言  寒蝉凄切，对长亭晚，骤雨初歇。  都门帐饮无绪，留恋处，兰舟催发。  执手相看泪眼，竟无语凝噎。  念去去，千里烟波，暮霭沉沉楚天阔。  多情自古伤离别，更那堪，冷落清秋节！  今宵酒醒何处？杨柳岸，晓风残月。  此去经年，应是良辰好景虚设。  便纵有千种风情，更与何人说？">
+<meta property="og:description" content="一、 准备下载Raspbian解压后使用etcher写入存储卡写入完成后在boot分区新建一个空文件并更改文件名为ssh 二、配置1、登录1sudo ssh pi@树莓派ip -p 22 *如果出错1234查看本地保存的ssh公钥ssh-keygen -l -f ~/.ssh/known_hosts清理树莓派ip的认证rsassh-keygen -R 树莓派ip 2、校正树莓派时间1234设置时区">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-19T16:24:44.343Z">
+<meta property="og:updated_time" content="2018-09-11T02:35:18.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一篇文章">
-<meta name="twitter:description" content="前言  寒蝉凄切，对长亭晚，骤雨初歇。  都门帐饮无绪，留恋处，兰舟催发。  执手相看泪眼，竟无语凝噎。  念去去，千里烟波，暮霭沉沉楚天阔。  多情自古伤离别，更那堪，冷落清秋节！  今宵酒醒何处？杨柳岸，晓风残月。  此去经年，应是良辰好景虚设。  便纵有千种风情，更与何人说？">
+<meta name="twitter:title" content="树莓派的开机配置">
+<meta name="twitter:description" content="一、 准备下载Raspbian解压后使用etcher写入存储卡写入完成后在boot分区新建一个空文件并更改文件名为ssh 二、配置1、登录1sudo ssh pi@树莓派ip -p 22 *如果出错1234查看本地保存的ssh公钥ssh-keygen -l -f ~/.ssh/known_hosts清理树莓派ip的认证rsassh-keygen -R 树莓派ip 2、校正树莓派时间1234设置时区">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yuezhi.tk/2018/08/19/我的第一篇文章/"/>
+  <link rel="canonical" href="http://yuezhi.tk/2018/09/11/树莓派的开机配置/"/>
 
 
 
 
 
-  <title>我的第一篇文章 | 木槿花开</title>
+  <title>树莓派的开机配置 | 木槿花开</title>
   
 
 
@@ -267,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yuezhi.tk/2018/08/19/我的第一篇文章/">
+    <link itemprop="mainEntityOfPage" href="http://yuezhi.tk/2018/09/11/树莓派的开机配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="越之">
@@ -284,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我的第一篇文章</h1>
+          <h1 class="post-title" itemprop="name headline">树莓派的开机配置</h1>
         
 
         <div class="post-meta">
@@ -296,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-19T21:21:28+08:00">
-                2018-08-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-11T09:56:28+08:00">
+                2018-09-11
               </time>
             
 
@@ -319,8 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/人生感悟/" itemprop="url" rel="index">
-                    <span itemprop="name">人生感悟</span>
+                  <a href="/categories/树莓派/" itemprop="url" rel="index">
+                    <span itemprop="name">树莓派</span>
                   </a>
                 </span>
 
@@ -350,7 +350,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  104 字
+                  307 字
                 </span>
               
 
@@ -387,22 +387,16 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><hr>
-<p> 寒蝉凄切，对长亭晚，骤雨初歇。</p>
-<hr>
-<p>都门帐饮无绪，留恋处，兰舟催发。</p>
-<hr>
-<p>执手相看泪眼，竟无语凝噎。</p>
-<hr>
-<p>念去去，千里烟波，暮霭沉沉楚天阔。</p>
-<hr>
-<p>多情自古伤离别，更那堪，冷落清秋节！</p>
-<hr>
-<p>今宵酒醒何处？杨柳岸，晓风残月。</p>
-<hr>
-<p>此去经年，应是良辰好景虚设。</p>
-<hr>
-<p>便纵有千种风情，更与何人说？ </p>
+        <h1 id="一、-准备"><a href="#一、-准备" class="headerlink" title="一、 准备"></a>一、 准备</h1><p>下载<a href="https://www.raspberrypi.org/downloads/" target="_blank" rel="noopener">Raspbian</a><br>解压后使用<a href="https://etcher.io/" target="_blank" rel="noopener">etcher</a>写入存储卡<br>写入完成后在boot分区新建一个空文件并更改文件名为ssh</p>
+<h1 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h1><h2 id="1、登录"><a href="#1、登录" class="headerlink" title="1、登录"></a>1、登录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ssh pi@树莓派ip -p 22</span><br></pre></td></tr></table></figure>
+<p>*如果出错<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">查看本地保存的ssh公钥</span><br><span class="line">ssh-keygen -l -f ~/.ssh/known_hosts</span><br><span class="line">清理树莓派ip的认证rsa</span><br><span class="line">ssh-keygen -R 树莓派ip</span><br></pre></td></tr></table></figure></p>
+<h2 id="2、校正树莓派时间"><a href="#2、校正树莓派时间" class="headerlink" title="2、校正树莓派时间"></a>2、校正树莓派时间</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">设置时区为 亚洲（Asia） 上海（Shanghai）</span><br><span class="line">sudo dpkg-reconfigure tzdata</span><br><span class="line">启动 NTP 使计算机时钟与 Internet 时间服务器同步</span><br><span class="line">sudo timedatectl <span class="built_in">set</span>-ntp <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h2 id="3、更改pi和root的账户密码"><a href="#3、更改pi和root的账户密码" class="headerlink" title="3、更改pi和root的账户密码"></a>3、更改pi和root的账户密码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">设置 pi 账号的密码，会让你输入两次新密码</span><br><span class="line">sudo passwd pi</span><br><span class="line">设置 root 账号的密码，会让你输入两次新密码</span><br><span class="line">sudo passwd root</span><br><span class="line">启用 root 账号登录</span><br><span class="line">sudo passwd --unlock root</span><br></pre></td></tr></table></figure>
+<h2 id="4、vnc远程连接"><a href="#4、vnc远程连接" class="headerlink" title="4、vnc远程连接"></a>4、vnc远程连接</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">安装tightvncserver</span><br><span class="line">sudo apt-get install -y tightvncserver</span><br><span class="line">设置控制密码（观看密码可设可不设）</span><br><span class="line">tightvncserver</span><br><span class="line">测试连接</span><br><span class="line">vncserver :2 -geometry 800x600 -depth 24</span><br></pre></td></tr></table></figure>
+<p>*新建一个vnc.sh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano vnc.sh</span><br></pre></td></tr></table></figure></p>
+<p>*写入内容如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">     vncserver :2 -geometry 800x600 -depth 24 -dpi 96</span><br></pre></td></tr></table></figure></p>
+<p>*分配可执行权限<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod  +x vnc.sh</span><br></pre></td></tr></table></figure></p>
+<p>*运行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./vnc.sh</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -422,7 +416,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/感悟/" rel="tag"># 感悟</a>
+            <a href="/tags/树莓派/" rel="tag"># 树莓派</a>
           
         </div>
       
@@ -435,15 +429,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/09/09/Linux实用工具-Best-Trace路由追踪/" rel="next" title="Linux实用工具-Best Trace路由追踪">
+                <i class="fa fa-chevron-left"></i> Linux实用工具-Best Trace路由追踪
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/23/linux下jdk的安装/" rel="prev" title="linux下jdk的安装">
-                linux下jdk的安装 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -609,7 +603,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、-准备"><span class="nav-number">1.</span> <span class="nav-text">一、 准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、配置"><span class="nav-number">2.</span> <span class="nav-text">二、配置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、登录"><span class="nav-number">2.1.</span> <span class="nav-text">1、登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、校正树莓派时间"><span class="nav-number">2.2.</span> <span class="nav-text">2、校正树莓派时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、更改pi和root的账户密码"><span class="nav-number">2.3.</span> <span class="nav-text">3、更改pi和root的账户密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、vnc远程连接"><span class="nav-number">2.4.</span> <span class="nav-text">4、vnc远程连接</span></a></li></ol></li></ol></div>
             
 
           </div>
