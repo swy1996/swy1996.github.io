@@ -1108,7 +1108,7 @@ B: 案例代码实现
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: window.location.pathname, 
+            id: decodeURI(window.location.pathname), 
             owner: 'swy1996',
             repo: 'gitment-comments',
             
