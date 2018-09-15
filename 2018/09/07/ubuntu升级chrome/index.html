@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="前提：添加key：1wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 添加仓库：1sudo sh -c &apos;echo &quot;deb http://dl.google.com/linux/chrome/deb/ stable main&quot; &amp;gt;&amp;gt; /etc/apt/sou">
+<meta name="description" content="前提：添加key：1wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -">
 <meta name="keywords" content="Ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu升级chrome">
 <meta property="og:url" content="http://yuezhi.tk/2018/09/07/ubuntu升级chrome/index.html">
 <meta property="og:site_name" content="木槿花开">
-<meta property="og:description" content="前提：添加key：1wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 添加仓库：1sudo sh -c &apos;echo &quot;deb http://dl.google.com/linux/chrome/deb/ stable main&quot; &amp;gt;&amp;gt; /etc/apt/sou">
+<meta property="og:description" content="前提：添加key：1wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-07T07:57:31.526Z">
+<meta property="og:updated_time" content="2018-09-15T14:50:34.408Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu升级chrome">
-<meta name="twitter:description" content="前提：添加key：1wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 添加仓库：1sudo sh -c &apos;echo &quot;deb http://dl.google.com/linux/chrome/deb/ stable main&quot; &amp;gt;&amp;gt; /etc/apt/sou">
+<meta name="twitter:description" content="前提：添加key：1wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -">
 
 
 
@@ -394,6 +394,7 @@
       
         <hr>
 <h2 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h2><h3 id="添加key："><a href="#添加key：" class="headerlink" title="添加key："></a>添加key：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="添加仓库："><a href="#添加仓库：" class="headerlink" title="添加仓库："></a>添加仓库：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sh -c <span class="string">'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" &gt;&gt; /etc/apt/sources.list.d/google.list'</span></span><br></pre></td></tr></table></figure>
 <h3 id="查找更新并安装："><a href="#查找更新并安装：" class="headerlink" title="查找更新并安装："></a>查找更新并安装：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update </span><br><span class="line">sudo apt-get install -y google-chrome-stable</span><br></pre></td></tr></table></figure>
 <h2 id="如果已安装，需要更新："><a href="#如果已安装，需要更新：" class="headerlink" title="如果已安装，需要更新："></a>如果已安装，需要更新：</h2><p>直接重复：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update </span><br><span class="line">sudo apt-get install -y google-chrome-stable</span><br></pre></td></tr></table></figure></p>
@@ -580,7 +581,7 @@
             <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                Links
+                友情链接
               </div>
               <ul class="links-of-blogroll-list">
                 

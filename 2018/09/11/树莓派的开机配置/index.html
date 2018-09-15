@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="一、 准备下载Raspbian解压后使用etcher写入存储卡写入完成后在boot分区新建一个空文件并更改文件名为ssh 二、配置1、登录1sudo ssh pi@树莓派ip -p 22 *如果出错1234查看本地保存的ssh公钥ssh-keygen -l -f ~/.ssh/known_hosts清理树莓派ip的认证rsassh-keygen -R 树莓派ip 2、校正树莓派时间1234设置时区">
+<meta name="description" content="一、 准备下载Raspbian解压后使用etcher写入存储卡写入完成后在boot分区新建一个空文件并更改文件名为ssh 二、配置1、登录1sudo ssh pi@树莓派ip -p 22">
 <meta name="keywords" content="树莓派">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树莓派的开机配置">
 <meta property="og:url" content="http://yuezhi.tk/2018/09/11/树莓派的开机配置/index.html">
 <meta property="og:site_name" content="木槿花开">
-<meta property="og:description" content="一、 准备下载Raspbian解压后使用etcher写入存储卡写入完成后在boot分区新建一个空文件并更改文件名为ssh 二、配置1、登录1sudo ssh pi@树莓派ip -p 22 *如果出错1234查看本地保存的ssh公钥ssh-keygen -l -f ~/.ssh/known_hosts清理树莓派ip的认证rsassh-keygen -R 树莓派ip 2、校正树莓派时间1234设置时区">
+<meta property="og:description" content="一、 准备下载Raspbian解压后使用etcher写入存储卡写入完成后在boot分区新建一个空文件并更改文件名为ssh 二、配置1、登录1sudo ssh pi@树莓派ip -p 22">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T02:35:18.156Z">
+<meta property="og:updated_time" content="2018-09-15T14:48:31.342Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="树莓派的开机配置">
-<meta name="twitter:description" content="一、 准备下载Raspbian解压后使用etcher写入存储卡写入完成后在boot分区新建一个空文件并更改文件名为ssh 二、配置1、登录1sudo ssh pi@树莓派ip -p 22 *如果出错1234查看本地保存的ssh公钥ssh-keygen -l -f ~/.ssh/known_hosts清理树莓派ip的认证rsassh-keygen -R 树莓派ip 2、校正树莓派时间1234设置时区">
+<meta name="twitter:description" content="一、 准备下载Raspbian解压后使用etcher写入存储卡写入完成后在boot分区新建一个空文件并更改文件名为ssh 二、配置1、登录1sudo ssh pi@树莓派ip -p 22">
 
 
 
@@ -394,6 +394,7 @@
       
         <h1 id="一、-准备"><a href="#一、-准备" class="headerlink" title="一、 准备"></a>一、 准备</h1><p>下载<a href="https://www.raspberrypi.org/downloads/" target="_blank" rel="noopener">Raspbian</a><br>解压后使用<a href="https://etcher.io/" target="_blank" rel="noopener">etcher</a>写入存储卡<br>写入完成后在boot分区新建一个空文件并更改文件名为ssh</p>
 <h1 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h1><h2 id="1、登录"><a href="#1、登录" class="headerlink" title="1、登录"></a>1、登录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ssh pi@树莓派ip -p 22</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>*如果出错<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">查看本地保存的ssh公钥</span><br><span class="line">ssh-keygen -l -f ~/.ssh/known_hosts</span><br><span class="line">清理树莓派ip的认证rsa</span><br><span class="line">ssh-keygen -R 树莓派ip</span><br></pre></td></tr></table></figure></p>
 <h2 id="2、校正树莓派时间"><a href="#2、校正树莓派时间" class="headerlink" title="2、校正树莓派时间"></a>2、校正树莓派时间</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">设置时区为 亚洲（Asia） 上海（Shanghai）</span><br><span class="line">sudo dpkg-reconfigure tzdata</span><br><span class="line">启动 NTP 使计算机时钟与 Internet 时间服务器同步</span><br><span class="line">sudo timedatectl <span class="built_in">set</span>-ntp <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <h2 id="3、更改pi和root的账户密码"><a href="#3、更改pi和root的账户密码" class="headerlink" title="3、更改pi和root的账户密码"></a>3、更改pi和root的账户密码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">设置 pi 账号的密码，会让你输入两次新密码</span><br><span class="line">sudo passwd pi</span><br><span class="line">设置 root 账号的密码，会让你输入两次新密码</span><br><span class="line">sudo passwd root</span><br><span class="line">启用 root 账号登录</span><br><span class="line">sudo passwd --unlock root</span><br></pre></td></tr></table></figure>
@@ -581,7 +582,7 @@
             <div class="links-of-blogroll motion-element links-of-blogroll-inline">
               <div class="links-of-blogroll-title">
                 <i class="fa  fa-fw fa-link"></i>
-                Links
+                友情链接
               </div>
               <ul class="links-of-blogroll-list">
                 
